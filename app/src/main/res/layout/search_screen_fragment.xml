@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#FFEFEF"
     android:padding="10dp"
-    tools:context=".fragments.searchscreen.SearchScreenFragment">
+    tools:context=".fragments.search_screen.SearchScreenFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"

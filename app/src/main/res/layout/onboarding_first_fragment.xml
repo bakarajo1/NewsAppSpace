@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFEFEF"
-    tools:context=".fragments.onboarding.oboarding1.OnboardingFirstFragment">
+    tools:context=".fragments.onboarding.oboarding1.Onboarding1ExploreFragment">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -38,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="Next"
+        android:visibility="invisible"
         android:textColor="#EE4747"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"

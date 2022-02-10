@@ -7,12 +7,16 @@
 
     <fragment
         android:id="@+id/newsDetailsFragment"
-        android:name="com.example.newsappspace.fragments.newsdetails.NewsDetailsFragment"
+        android:name="com.example.newsappspace.fragments.news_details.NewsDetailsFragment"
         android:label="news_details_fragment"
-        tools:layout="@layout/news_details_fragment" />
+        tools:layout="@layout/news_details_fragment" >
+        <argument
+            android:name="singleArticle"
+            app:argType="com.example.newsappspace.model.ArticleX" />
+    </fragment>
     <fragment
         android:id="@+id/newsScreenFragment"
-        android:name="com.example.newsappspace.fragments.newsscreen.NewsScreenFragment"
+        android:name="com.example.newsappspace.fragments.news_screen.NewsScreenFragment"
         android:label="news_screen_fragment"
         tools:layout="@layout/news_screen_fragment" >
         <action
@@ -21,22 +25,26 @@
     </fragment>
     <fragment
         android:id="@+id/onboardingFirstFragment"
-        android:name="com.example.newsappspace.fragments.onboarding.oboarding1.OnboardingFirstFragment"
+        android:name="com.example.newsappspace.fragments.onboarding.oboarding1.Onboarding1ExploreFragment"
         android:label="onboarding_first_fragment"
         tools:layout="@layout/onboarding_first_fragment" />
     <fragment
         android:id="@+id/savedScreenFragment"
-        android:name="com.example.newsappspace.fragments.savedsscreen.SavedScreenFragment"
+        android:name="com.example.newsappspace.fragments.saved_screen.SavedScreenFragment"
         android:label="saved_screen_fragment"
         tools:layout="@layout/saved_screen_fragment" />
     <fragment
         android:id="@+id/searchScreenFragment"
-        android:name="com.example.newsappspace.fragments.searchscreen.SearchScreenFragment"
+        android:name="com.example.newsappspace.fragments.search_screen.SearchScreenFragment"
         android:label="search_screen_fragment"
-        tools:layout="@layout/search_screen_fragment" />
+        tools:layout="@layout/search_screen_fragment" >
+        <action
+            android:id="@+id/action_searchScreenFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.example.newsappspace.fragments.splashscreen.SplashScreenFragment"
+        android:name="com.example.newsappspace.fragments.splash_screen.SplashScreenFragment"
         android:label="splash_screen_fragment"
         tools:layout="@layout/splash_screen_fragment" >
         <action
@@ -45,7 +53,7 @@
     </fragment>
     <fragment
         android:id="@+id/viewpagerHost"
-        android:name="com.example.newsappspace.fragments.onboardingviewpager.ViewpagerHost"
+        android:name="com.example.newsappspace.fragments.onboarding.onboardingviewpager.OnboardingViewpagerHost"
         android:label="viewpager_host_fragment"
         tools:layout="@layout/viewpager_host_fragment" >
         <action
@@ -54,12 +62,12 @@
     </fragment>
     <fragment
         android:id="@+id/onboarding2"
-        android:name="com.example.newsappspace.fragments.onboarding.onboarding2.Onboarding2"
+        android:name="com.example.newsappspace.fragments.onboarding.onboarding2.Onboarding2SearchFragment"
         android:label="fragment_onboarding2"
         tools:layout="@layout/fragment_onboarding2" />
     <fragment
         android:id="@+id/onboarding3"
-        android:name="com.example.newsappspace.fragments.onboarding.onboarding3.Onboarding3"
+        android:name="com.example.newsappspace.fragments.onboarding.onboarding3.Onboarding3SaveRelevantPostsFragment"
         android:label="fragment_onboarding3"
         tools:layout="@layout/fragment_onboarding3" />
 </navigation>

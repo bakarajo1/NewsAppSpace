@@ -18,8 +18,6 @@ class MainActivity : AppCompatActivity() {
         bottomNav()
         listener()
     }
-
-
     private fun bottomNav(){
          navController = this.findNavController(R.id.fragmentHost)
         binding.bottomNavigationView.setupWithNavController(navController)

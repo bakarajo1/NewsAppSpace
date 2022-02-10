@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFEFEF"
-    tools:context=".fragments.newsscreen.NewsScreenFragment">
+    tools:context=".fragments.news_screen.NewsScreenFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView
