@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="com.example.newsappspace.fragments.newsdetails.NewsDetailsFragment"
+        android:label="news_details_fragment"
+        tools:layout="@layout/news_details_fragment" />
+    <fragment
+        android:id="@+id/newsScreenFragment"
+        android:name="com.example.newsappspace.fragments.newsscreen.NewsScreenFragment"
+        android:label="news_screen_fragment"
+        tools:layout="@layout/news_screen_fragment" >
+        <action
+            android:id="@+id/action_newsScreenFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingFirstFragment"
+        android:name="com.example.newsappspace.fragments.onboarding.oboarding1.OnboardingFirstFragment"
+        android:label="onboarding_first_fragment"
+        tools:layout="@layout/onboarding_first_fragment" />
+    <fragment
+        android:id="@+id/savedScreenFragment"
+        android:name="com.example.newsappspace.fragments.savedsscreen.SavedScreenFragment"
+        android:label="saved_screen_fragment"
+        tools:layout="@layout/saved_screen_fragment" />
+    <fragment
+        android:id="@+id/searchScreenFragment"
+        android:name="com.example.newsappspace.fragments.searchscreen.SearchScreenFragment"
+        android:label="search_screen_fragment"
+        tools:layout="@layout/search_screen_fragment" />
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.newsappspace.fragments.splashscreen.SplashScreenFragment"
+        android:label="splash_screen_fragment"
+        tools:layout="@layout/splash_screen_fragment" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_viewpagerHost"
+            app:destination="@id/viewpagerHost" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewpagerHost"
+        android:name="com.example.newsappspace.fragments.onboardingviewpager.ViewpagerHost"
+        android:label="viewpager_host_fragment"
+        tools:layout="@layout/viewpager_host_fragment" >
+        <action
+            android:id="@+id/action_viewpagerHost_to_newsScreenFragment"
+            app:destination="@id/newsScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboarding2"
+        android:name="com.example.newsappspace.fragments.onboarding.onboarding2.Onboarding2"
+        android:label="fragment_onboarding2"
+        tools:layout="@layout/fragment_onboarding2" />
+    <fragment
+        android:id="@+id/onboarding3"
+        android:name="com.example.newsappspace.fragments.onboarding.onboarding3.Onboarding3"
+        android:label="fragment_onboarding3"
+        tools:layout="@layout/fragment_onboarding3" />
+</navigation>

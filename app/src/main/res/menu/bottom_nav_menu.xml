@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/newsScreenFragment"
+        android:title="news"
+        android:icon="@mipmap/newspaper_foreground"/>
+
+    <item android:id="@+id/searchScreenFragment"
+        android:icon="@mipmap/loupe_foreground"
+        android:title="search"/>
+    <item android:id="@+id/savedScreenFragment"
+        android:icon="@mipmap/love_foreground"
+        android:title="saved"/>
+
+</menu>
