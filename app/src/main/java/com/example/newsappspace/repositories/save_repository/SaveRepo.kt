@@ -1,9 +1,9 @@
 package com.example.newsappspace.repositories.save_repository
 
-import com.example.newsappspace.model.ArticleX
+import com.example.newsappspace.model.Article
 
 interface SaveRepo  {
 
-    suspend fun getAllNews():List<ArticleX>
+    suspend fun getAllNews():List<Article>
 
 }

@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.newsappspace.App
 import com.example.newsappspace.R
-import com.example.newsappspace.model.ArticleX
+import com.example.newsappspace.model.Article
 import com.example.newsappspace.repositories.news_detail_repository.DetailRepo
 import com.example.newsappspace.repositories.news_detail_repository.DetailRepoImpl
 import kotlinx.coroutines.Dispatchers
@@ -20,7 +20,7 @@ class NewsDetailsViewModel : ViewModel() {
 
         suspend fun checkSavedArticle(url: String): Boolean = url in repository.getAllNewsUrl()
 
-        fun determineOperation(articles: ArticleX, url: String) {
+        fun determineOperation(articles: Article, url: String) {
             viewModelScope.launch {
                 if (checkSavedArticle(url)) {
                     deleteArticles(url)
@@ -30,7 +30,7 @@ class NewsDetailsViewModel : ViewModel() {
             }
         }
 
-        private suspend fun insertArticle(articles: ArticleX) {
+        private suspend fun insertArticle(articles: Article) {
             repository.addNews(articles)
         }
 

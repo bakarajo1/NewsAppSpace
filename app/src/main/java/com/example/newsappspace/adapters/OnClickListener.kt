@@ -1,8 +1,8 @@
 package com.example.newsappspace.adapters
 
-import com.example.newsappspace.model.ArticleX
+import com.example.newsappspace.model.Article
 
 
 interface OnClickListener {
-    fun onItemCLick(article: ArticleX)
+    fun onItemCLick(article: Article)
 }

@@ -11,7 +11,7 @@ import com.example.newsappspace.adapters.OnClickListener
 import com.example.newsappspace.adapters.news_adapter.NewsAdapter
 import com.example.newsappspace.base.BaseFragment
 import com.example.newsappspace.databinding.SavedScreenFragmentBinding
-import com.example.newsappspace.model.ArticleX
+import com.example.newsappspace.model.Article
 
 class SavedScreenFragment : BaseFragment<SavedScreenFragmentBinding, SavedScreenViewModel>(),OnClickListener {
     private val myAdapter by lazy { NewsAdapter(this) }
@@ -23,9 +23,11 @@ class SavedScreenFragment : BaseFragment<SavedScreenFragmentBinding, SavedScreen
 
 
     override fun init() {
+        viewModel.getNews()
         observePrgBar()
         initRecyclerView()
         observeRecyclerItems()
+
     }
 
     private fun initRecyclerView() {
@@ -44,10 +46,12 @@ class SavedScreenFragment : BaseFragment<SavedScreenFragmentBinding, SavedScreen
             binding.progressBar2.isVisible=it
         }
     }
-    override fun onItemCLick(article: ArticleX) {
+    override fun onItemCLick(article: Article) {
         findNavController().navigate(
             R.id.action_savedScreenFragment_to_newsDetailsFragment,
-            Bundle().apply { putParcelable("singleArticle",article) }
+            Bundle().apply { putParcelable(getString(R.string.single_article),article) }
+
+
         )    }
 }
 

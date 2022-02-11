@@ -9,7 +9,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 @Entity(tableName = "news")
-data class ArticleX(
+data class Article(
     @PrimaryKey(autoGenerate = true)
     var id:Int?=null,
     @SerializedName("author")
@@ -21,7 +21,7 @@ data class ArticleX(
     @SerializedName("publishedAt")
     var publishedAt: String?,
     @SerializedName("source")
-    var source: SourceX?,
+    var source: Source?,
     @SerializedName("title")
     var title: String?,
     @SerializedName("url")

@@ -8,12 +8,12 @@ import com.bumptech.glide.Glide
 import com.example.newsappspace.R
 import com.example.newsappspace.adapters.OnClickListener
 import com.example.newsappspace.databinding.NewsItemLayoutBinding
-import com.example.newsappspace.model.ArticleX
+import com.example.newsappspace.model.Article
 
 
 class NewsAdapter(private val onClickListener: OnClickListener) :
 
-    ListAdapter<ArticleX, NewsAdapter.ViewHolder>(DiffUtil<ArticleX>()) {
+    ListAdapter<Article, NewsAdapter.ViewHolder>(DiffUtil<Article>()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -32,13 +32,12 @@ class NewsAdapter(private val onClickListener: OnClickListener) :
 
     class ViewHolder(private val binding: NewsItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(article: ArticleX, onClickListener: OnClickListener) {
+        fun onBind(article: Article, onClickListener: OnClickListener) {
             with(binding) {
                 titleTextView.text = article.title
                 providerTextView.text = article.source?.name
                 dateTextView.text = article.publishedAt
                 Glide.with(newsImageView).load(article.urlToImage).placeholder(R.drawable.ic_launcher_background).into(newsImageView)
-
                 singleLay.setOnClickListener {
                     onClickListener.onItemCLick(article)
                 }

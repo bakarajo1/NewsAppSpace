@@ -12,8 +12,7 @@ import com.example.newsappspace.adapters.OnClickListener
 import com.example.newsappspace.adapters.news_adapter.NewsAdapter
 import com.example.newsappspace.base.BaseFragment
 import com.example.newsappspace.databinding.SearchScreenFragmentBinding
-import com.example.newsappspace.fragments.news_screen.NewsScreenFragmentDirections
-import com.example.newsappspace.model.ArticleX
+import com.example.newsappspace.model.Article
 
 class SearchScreenFragment : BaseFragment<SearchScreenFragmentBinding, SearchScreenViewModel>(),
     OnClickListener {
@@ -64,8 +63,7 @@ class SearchScreenFragment : BaseFragment<SearchScreenFragmentBinding, SearchScr
             }
         }
     }
-
-    override fun onItemCLick(article: ArticleX) {
+    override fun onItemCLick(article: Article) {
         findNavController().navigate(R.id.action_searchScreenFragment_to_newsDetailsFragment,
             Bundle().apply { putParcelable("singleArticle",article) }
         )

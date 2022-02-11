@@ -11,7 +11,7 @@ import com.example.newsappspace.adapters.news_adapter.NewsAdapter
 import com.example.newsappspace.adapters.OnClickListener
 import com.example.newsappspace.base.BaseFragment
 import com.example.newsappspace.databinding.NewsScreenFragmentBinding
-import com.example.newsappspace.model.ArticleX
+import com.example.newsappspace.model.Article
 
 
 
@@ -61,7 +61,7 @@ class NewsScreenFragment: BaseFragment<NewsScreenFragmentBinding, NewsScreenView
 
         }
     }
-    override fun onItemCLick(article: ArticleX) {
+    override fun onItemCLick(article: Article) {
         findNavController().navigate(R.id.action_newsScreenFragment_to_newsDetailsFragment,
             Bundle().apply { putParcelable("singleArticle",article) }
         )    }
