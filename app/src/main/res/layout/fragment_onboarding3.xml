@@ -24,7 +24,7 @@ tools:context=".fragments.onboarding.onboarding3.Onboarding3SaveRelevantPostsFra
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:paddingHorizontal="25dp"
-    android:text="Save most relevant articles to access anytime!"
+    android:text="@string/save_most_relevant_articles_to_access_anytime"
     android:textSize="32sp"
     app:layout_constraintBottom_toTopOf="@+id/nextTextView"
     app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@ tools:context=".fragments.onboarding.onboarding3.Onboarding3SaveRelevantPostsFra
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
-    android:text="Next"
+    android:text="@string/next"
     android:textColor="#EE4747"
     android:textSize="24sp"
     android:visibility="invisible"
@@ -45,7 +45,7 @@ tools:context=".fragments.onboarding.onboarding3.Onboarding3SaveRelevantPostsFra
     app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/attributeImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_vector__4_"

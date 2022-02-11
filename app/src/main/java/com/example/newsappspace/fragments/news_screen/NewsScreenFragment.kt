@@ -61,10 +61,7 @@ class NewsScreenFragment: BaseFragment<NewsScreenFragmentBinding, NewsScreenView
 
         }
     }
-
-
     override fun onItemCLick(article: ArticleX) {
-
         findNavController().navigate(R.id.action_newsScreenFragment_to_newsDetailsFragment,
             Bundle().apply { putParcelable("singleArticle",article) }
         )    }

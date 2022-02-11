@@ -6,4 +6,13 @@
     <string name="category_SPORT">sport</string>
     <string name="category_TECHNOLOGY">technology</string>
     <string name="FINISH">finish</string>
+    <string name="explore_news_around_the_world">Explore news around the world!</string>
+    <string name="next">Next</string>
+    <string name="search_articles_with_ease">Search articles with ease!</string>
+    <string name="save_most_relevant_articles_to_access_anytime">Save most relevant articles to access anytime!</string>
+    <string name="ssg_news">SSG NEWS</string>
+    <string name="european_bond_yields_soar_on_tightening_talk_u_s_stock_futures_dip_reuters">European bond yields soar on tightening talk, U.S. stock futures dip - Reuters</string>
+    <string name="textview">TextView</string>
+    <string name="hint">hint</string>
+    <string name="welcome">Welcome</string>
 </resources>

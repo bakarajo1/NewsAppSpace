@@ -21,13 +21,18 @@ class NewsDetailsFragment: BaseFragment<NewsDetailsFragmentBinding, NewsDetailsV
 
 
     override fun init() {
+
+        setViews()
+        observeIcon()
+        setListener()
+    }
+
+    private fun setViews() {
         viewModel.checkArticle(args.singleArticle.url!!)
         binding.newsDescriptionTextView.text=args.singleArticle.description
         Glide.with(binding.newsImageView).load(args.singleArticle.urlToImage).placeholder(R.drawable.ic_launcher_background).into(binding.newsImageView)
         binding.newsNameTextView.text=args.singleArticle.source?.name
         binding.newsTitleTextView.text=args.singleArticle.title
-        observeIcon()
-        setListener()
     }
 
     private fun setListener() {

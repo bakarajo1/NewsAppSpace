@@ -20,10 +20,6 @@ class SearchScreenViewModel : ViewModel() {
     private val _prgBar: MutableLiveData<Boolean> = MutableLiveData()
     val prgBar: LiveData<Boolean> get() = _prgBar
 
-
-
-
-
     fun searchSelected(q:String){
         getNews(q)
     }
@@ -32,9 +28,7 @@ class SearchScreenViewModel : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             _prgBar.postValue(true)
             val response = repository.getSearchedNews( ApiKey, q = q)
-
             _successLiveData.postValue(response.body())
-
             _prgBar.postValue(false)
 
         }

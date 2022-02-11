@@ -37,6 +37,7 @@ class OnboardingViewpagerHost : BaseFragment<ViewpagerHostFragmentBinding, Onboa
             onboardingViewpager.setCurrentItem(++screenPos,true)
             if (screenPos==3){
                 findNavController().navigate(R.id.action_viewpagerHost_to_newsScreenFragment)
+
             }else if(screenPos==2){
                 binding.nextTextView.text=getString(R.string.FINISH)
             }

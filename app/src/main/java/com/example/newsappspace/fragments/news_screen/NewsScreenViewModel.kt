@@ -25,9 +25,6 @@ class NewsScreenViewModel : ViewModel() {
         getNews("business")
     }
 
-//    fun setCategory(string: String){
-//        getNews(string)
-//    }
     fun getNews(category: String) {
         viewModelScope.launch(Dispatchers.IO) {
             _progressBarLiveData.postValue(true)

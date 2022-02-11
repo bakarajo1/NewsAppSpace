@@ -32,7 +32,11 @@
         android:id="@+id/savedScreenFragment"
         android:name="com.example.newsappspace.fragments.saved_screen.SavedScreenFragment"
         android:label="saved_screen_fragment"
-        tools:layout="@layout/saved_screen_fragment" />
+        tools:layout="@layout/saved_screen_fragment" >
+        <action
+            android:id="@+id/action_savedScreenFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchScreenFragment"
         android:name="com.example.newsappspace.fragments.search_screen.SearchScreenFragment"
@@ -49,7 +53,8 @@
         tools:layout="@layout/splash_screen_fragment" >
         <action
             android:id="@+id/action_splashScreenFragment_to_viewpagerHost"
-            app:destination="@id/viewpagerHost" />
+            app:destination="@id/viewpagerHost"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/viewpagerHost"
@@ -58,7 +63,8 @@
         tools:layout="@layout/viewpager_host_fragment" >
         <action
             android:id="@+id/action_viewpagerHost_to_newsScreenFragment"
-            app:destination="@id/newsScreenFragment" />
+            app:destination="@id/newsScreenFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/onboarding2"

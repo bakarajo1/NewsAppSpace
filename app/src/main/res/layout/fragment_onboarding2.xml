@@ -24,7 +24,7 @@ tools:context=".fragments.onboarding.onboarding2.Onboarding2SearchFragment">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingHorizontal="30dp"
-        android:text="Search articles with ease!"
+        android:text="@string/search_articles_with_ease"
         android:textSize="32sp"
 
         app:layout_constraintBottom_toTopOf="@+id/nextTextView"
@@ -38,7 +38,7 @@ tools:context=".fragments.onboarding.onboarding2.Onboarding2SearchFragment">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="20dp"
-    android:text="Next"
+    android:text="@string/next"
     android:textColor="#EE4747"
     android:textSize="24sp"
     android:visibility="invisible"

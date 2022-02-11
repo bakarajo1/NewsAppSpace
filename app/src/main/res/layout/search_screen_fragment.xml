@@ -26,7 +26,7 @@
         android:layout_width="407dp"
         android:layout_height="58dp"
         android:drawableEnd="@drawable/ic_vector__3_"
-        android:hint="hint"
+        android:hint="@string/hint"
         android:paddingHorizontal="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
