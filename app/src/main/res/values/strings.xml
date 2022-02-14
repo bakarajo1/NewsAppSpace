@@ -16,4 +16,7 @@
     <string name="hint">hint</string>
     <string name="welcome">Welcome</string>
     <string name="single_article">singleArticle</string>
+    <string name="NOT_FOUND">not found</string>
+    <string name="NAME_NEWS_DATASTORE">NewsDataStore</string>
+    <string name="TRUE">true</string>
 </resources>

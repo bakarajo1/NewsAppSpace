@@ -1,4 +1,4 @@
-package com.example.newsappspace.fragments.onboarding.onboardingviewpager
+package com.example.newsappspace.fragments.onboarding.onboarding_view_pager
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -37,6 +37,7 @@ class OnboardingViewpagerHost : BaseFragment<ViewpagerHostFragmentBinding, Onboa
             onboardingViewpager.setCurrentItem(++screenPos,true)
             if (screenPos==3){
                 findNavController().navigate(R.id.action_viewpagerHost_to_newsScreenFragment)
+                viewModel.saveUserState()
 
             }else if(screenPos==2){
                 binding.nextTextView.text=getString(R.string.FINISH)

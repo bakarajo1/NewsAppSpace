@@ -12,7 +12,7 @@
         tools:layout="@layout/news_details_fragment" >
         <argument
             android:name="singleArticle"
-            app:argType="com.example.newsappspace.model.ArticleX" />
+            app:argType="com.example.newsappspace.model.Article" />
     </fragment>
     <fragment
         android:id="@+id/newsScreenFragment"
@@ -55,10 +55,13 @@
             android:id="@+id/action_splashScreenFragment_to_viewpagerHost"
             app:destination="@id/viewpagerHost"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_newsScreenFragment"
+            app:destination="@id/newsScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/viewpagerHost"
-        android:name="com.example.newsappspace.fragments.onboarding.onboardingviewpager.OnboardingViewpagerHost"
+        android:name="com.example.newsappspace.fragments.onboarding.onboarding_view_pager.OnboardingViewpagerHost"
         android:label="viewpager_host_fragment"
         tools:layout="@layout/viewpager_host_fragment" >
         <action

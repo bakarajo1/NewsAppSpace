@@ -30,7 +30,18 @@ class SplashScreenFragment : BaseFragment<SplashScreenFragmentBinding, SplashScr
     private fun navigate() {
         lifecycleScope.launch {
             delay(3000L)
-            findNavController().navigate(R.id.action_splashScreenFragment_to_viewpagerHost)
+            chooseNavigation()
+        }
+    }
+
+    private fun chooseNavigation() {
+        viewModel.userStateLiveData.observe(viewLifecycleOwner) {
+            if (it==getString(R.string.TRUE)) {
+                findNavController().navigate(R.id.action_splashScreenFragment_to_newsScreenFragment)
+            } else {
+                findNavController().navigate(R.id.action_splashScreenFragment_to_viewpagerHost)
+
+            }
         }
     }
 }

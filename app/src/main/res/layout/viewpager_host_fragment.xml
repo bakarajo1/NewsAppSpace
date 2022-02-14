@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.onboarding.onboardingviewpager.OnboardingViewpagerHost">
+    tools:context=".fragments.onboarding.onboarding_view_pager.OnboardingViewpagerHost">
 
 
     <androidx.viewpager2.widget.ViewPager2
