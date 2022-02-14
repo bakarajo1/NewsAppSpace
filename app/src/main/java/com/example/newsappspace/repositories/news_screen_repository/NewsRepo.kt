@@ -1,4 +1,4 @@
-package com.example.newsappspace.repositories.news_screen_repo
+package com.example.newsappspace.repositories.news_screen_repository
 
 import com.example.newsappspace.model.News
 import retrofit2.Response

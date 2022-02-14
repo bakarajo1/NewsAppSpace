@@ -1,4 +1,4 @@
-package com.example.newsappspace.repositories.search_screen_repo
+package com.example.newsappspace.repositories.search_screen_repository
 
 import com.example.newsappspace.model.News
 import com.example.newsappspace.retrofit.RetrofitService

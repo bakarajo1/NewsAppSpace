@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.newsappspace.model.News
-import com.example.newsappspace.repositories.news_screen_repo.NewsRepo
-import com.example.newsappspace.repositories.news_screen_repo.NewsRepoImpl
+import com.example.newsappspace.repositories.news_screen_repository.NewsRepo
+import com.example.newsappspace.repositories.news_screen_repository.NewsRepoImpl
 import com.example.newsappspace.retrofit.ApiKey
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
