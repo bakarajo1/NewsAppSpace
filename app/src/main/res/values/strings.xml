@@ -19,4 +19,6 @@
     <string name="NOT_FOUND">not found</string>
     <string name="NAME_NEWS_DATASTORE">NewsDataStore</string>
     <string name="TRUE">true</string>
+    <string name="SINGLE_ARTICLE">singleArticle</string>
+    <string name="category_business">business</string>
 </resources>

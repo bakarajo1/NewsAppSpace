@@ -9,6 +9,8 @@ import com.example.newsappspace.R
 import com.example.newsappspace.adapters.OnClickListener
 import com.example.newsappspace.databinding.NewsItemLayoutBinding
 import com.example.newsappspace.model.Article
+import com.example.newsappspace.util.DiffUtil
+import com.example.newsappspace.util.extensions.setImage
 
 
 class NewsAdapter(private val onClickListener: OnClickListener) :
@@ -37,7 +39,7 @@ class NewsAdapter(private val onClickListener: OnClickListener) :
                 titleTextView.text = article.title
                 providerTextView.text = article.source?.name
                 dateTextView.text = article.publishedAt
-                Glide.with(newsImageView).load(article.urlToImage).placeholder(R.drawable.ic_launcher_background).into(newsImageView)
+                article.urlToImage?.let { newsImageView.setImage(it) }
                 singleLay.setOnClickListener {
                     onClickListener.onItemCLick(article)
                 }

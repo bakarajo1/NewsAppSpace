@@ -23,7 +23,7 @@ class SplashScreenViewModel : ViewModel() {
     init {
         getUserState()
     }
-    fun getUserState() {
+    private fun getUserState() {
         viewModelScope.launch(Dispatchers.IO) {
             _userStateLiveData.postValue(repository.getUserState(Strings.STATE_LOGGED_IN).first())
         }

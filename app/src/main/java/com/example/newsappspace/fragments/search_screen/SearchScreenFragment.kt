@@ -67,6 +67,5 @@ class SearchScreenFragment : BaseFragment<SearchScreenFragmentBinding, SearchScr
         findNavController().navigate(R.id.action_searchScreenFragment_to_newsDetailsFragment,
             Bundle().apply { putParcelable("singleArticle",article) }
         )
-    //  SearchScreenFragmentDirections.actionSearchScreenFragmentToNewsDetailsFragment(article)
     }
 }

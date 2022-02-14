@@ -1,4 +1,4 @@
-package com.example.newsappspace.fragments.onboarding.onboarding3
+package com.example.newsappspace.fragments.onboarding.onboarding3_save_screen
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

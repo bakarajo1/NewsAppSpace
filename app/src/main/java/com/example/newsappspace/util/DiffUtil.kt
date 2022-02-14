@@ -1,4 +1,4 @@
-package com.example.newsappspace.adapters.news_adapter
+package com.example.newsappspace.util
 
 import android.annotation.SuppressLint
 import androidx.recyclerview.widget.DiffUtil

@@ -6,7 +6,7 @@ android:id="@+id/onboard2lay"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="#FFEFEF"
-tools:context=".fragments.onboarding.onboarding2.Onboarding2SearchFragment">
+tools:context=".fragments.onboarding.onboarding2_search_screen.Onboarding2SearchFragment">
 
 <ImageView
     android:id="@+id/imageView4"

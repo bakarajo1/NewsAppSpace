@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/onboardingFirstFragment"
-        android:name="com.example.newsappspace.fragments.onboarding.oboarding1.Onboarding1ExploreFragment"
+        android:name="com.example.newsappspace.fragments.onboarding.oboarding1Explore.Onboarding1ExploreFragment"
         android:label="onboarding_first_fragment"
         tools:layout="@layout/onboarding_first_fragment" />
     <fragment
@@ -71,12 +71,12 @@
     </fragment>
     <fragment
         android:id="@+id/onboarding2"
-        android:name="com.example.newsappspace.fragments.onboarding.onboarding2.Onboarding2SearchFragment"
+        android:name="com.example.newsappspace.fragments.onboarding.onboarding2_search_screen.Onboarding2SearchFragment"
         android:label="fragment_onboarding2"
-        tools:layout="@layout/fragment_onboarding2" />
+        tools:layout="@layout/onboarding2_search_fragment" />
     <fragment
         android:id="@+id/onboarding3"
-        android:name="com.example.newsappspace.fragments.onboarding.onboarding3.Onboarding3SaveRelevantPostsFragment"
+        android:name="com.example.newsappspace.fragments.onboarding.onboarding3_save_screen.Onboarding3SaveRelevantPostsFragment"
         android:label="fragment_onboarding3"
         tools:layout="@layout/fragment_onboarding3" />
 </navigation>

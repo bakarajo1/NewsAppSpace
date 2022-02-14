@@ -22,12 +22,11 @@ class NewsScreenFragment: BaseFragment<NewsScreenFragmentBinding, NewsScreenView
 
     override fun connectViewModel(): Class<NewsScreenViewModel> = NewsScreenViewModel::class.java
     override fun init() {
+        viewModel.getNews(getString(R.string.category_business))
         observePrgBar()
         initRecyclerView()
-        //myAdapter.submitList(listOf<ArticleX>(mm))
         observeRecyclerItems()
         setListeners()
-
     }
     private fun setListeners() {
         with(binding){
@@ -63,7 +62,7 @@ class NewsScreenFragment: BaseFragment<NewsScreenFragmentBinding, NewsScreenView
     }
     override fun onItemCLick(article: Article) {
         findNavController().navigate(R.id.action_newsScreenFragment_to_newsDetailsFragment,
-            Bundle().apply { putParcelable("singleArticle",article) }
+            Bundle().apply { putParcelable(getString(R.string.SINGLE_ARTICLE),article) }
         )    }
 }
 

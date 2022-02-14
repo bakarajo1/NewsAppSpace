@@ -11,6 +11,7 @@ import com.example.newsappspace.retrofit.ApiKey
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+
 class NewsScreenViewModel : ViewModel() {
     private val repository: NewsRepo by lazy { NewsRepoImpl() }
 
@@ -21,9 +22,7 @@ class NewsScreenViewModel : ViewModel() {
     val prgBar: LiveData<Boolean> get() = _progressBarLiveData
 
 
-    init {
-        getNews("business")
-    }
+
 
     fun getNews(category: String) {
         viewModelScope.launch(Dispatchers.IO) {

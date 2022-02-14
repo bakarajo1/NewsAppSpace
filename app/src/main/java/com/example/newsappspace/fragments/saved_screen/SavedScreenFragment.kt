@@ -13,7 +13,8 @@ import com.example.newsappspace.base.BaseFragment
 import com.example.newsappspace.databinding.SavedScreenFragmentBinding
 import com.example.newsappspace.model.Article
 
-class SavedScreenFragment : BaseFragment<SavedScreenFragmentBinding, SavedScreenViewModel>(),OnClickListener {
+class SavedScreenFragment : BaseFragment<SavedScreenFragmentBinding, SavedScreenViewModel>(),
+    OnClickListener {
     private val myAdapter by lazy { NewsAdapter(this) }
 
     override val bindingInflater: (inflater: LayoutInflater, container: ViewGroup?, attachToRoot: Boolean) -> SavedScreenFragmentBinding
@@ -36,23 +37,26 @@ class SavedScreenFragment : BaseFragment<SavedScreenFragmentBinding, SavedScreen
             adapter = myAdapter
         }
     }
+
     private fun observeRecyclerItems() {
         viewModel.savedNewsLiveData.observe(viewLifecycleOwner) {
             myAdapter.submitList(it)
         }
     }
+
     private fun observePrgBar() {
         viewModel.prgBar.observe(viewLifecycleOwner) {
-            binding.progressBar2.isVisible=it
+            binding.progressBar2.isVisible = it
         }
     }
+
     override fun onItemCLick(article: Article) {
         findNavController().navigate(
             R.id.action_savedScreenFragment_to_newsDetailsFragment,
-            Bundle().apply { putParcelable(getString(R.string.single_article),article) }
+            Bundle().apply { putParcelable(getString(R.string.single_article), article) }
 
-
-        )    }
+        )
+    }
 }
 
 
